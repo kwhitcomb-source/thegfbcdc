@@ -170,8 +170,10 @@ function printPage() {
 // Share functionality (for future implementation)
 function shareContent(platform, url, title) {
     const shareUrls = {
-        facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
-        twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`,
+        facebook: `https://www.facebook.com/people/The-Greater-First-Baptist-Church-of-Mt-Pleasant-Plains/100064437860178/#`,
+        twitter: `https://x.com/k29258218`,
+        youtube: 'https://www.youtube.com/channel/UCguwrSa2mxgh0LgWxsHcR5A' ,
+        location: 'https://www.google.com/maps/place/The+Greater+First+Baptist+Church/@38.9250122,-77.0292107,16z/data=!3m1!4b1!4m6!3m5!1s0x89b7b7e1c1091d6b:0x785199a699d51b18!8m2!3d38.9250122!4d-77.0292107!16s%2Fg%2F1tpbcwdx?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoASAFQAw%3D%3D' ,
         email: `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(url)}`
     };
     
