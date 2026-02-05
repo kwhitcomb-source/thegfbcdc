@@ -881,8 +881,9 @@ section {
 ==================================*/
 .sermon-thumbnail {
   position: relative;
-  width: 280px;     /* adjust down as needed */
-  height: 160px;    /* 16:9 ratio */
+  max-width: 280px;     /* adjust down as needed */
+  height: 160px;     /* 16:9 ratio */
+  aspect-ratio: 16/9;
   overflow: hidden;
 }
 
