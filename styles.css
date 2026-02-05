@@ -545,6 +545,14 @@ section {
     color: rgba(255, 255, 255, 0.7);
 }
 
+/*Staff Photo */
+.staff-photo {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Leadership Page Specific Styles */
 .leadership-grid {
     display: grid;
