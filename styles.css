@@ -392,6 +392,7 @@ section {
     box-shadow: var(--shadow-lg);
     width: 100%;
     max-width: 400px;
+    align-items: center
 }
 
 .pastor-info h2 {
