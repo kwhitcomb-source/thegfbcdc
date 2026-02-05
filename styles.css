@@ -876,6 +876,36 @@ section {
         padding: 3rem 0;
     }
 }    
+/*================================
+  LIVE STREAM PAGE
+==================================*/
+.sermon-thumbnail {
+  position: relative;
+}
+
+.play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.play-overlay:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+
 /* ===================================
    FLOATING GIVE BUTTON
 =================================== */
