@@ -879,6 +879,26 @@ section {
 /*================================
   LIVE STREAM PAGE
 ==================================*/
+.sermon-card {
+  max-width: 300px;
+}
+
+.sermon-thumbnail img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.sermon-card {
+  max-width: 300px;
+}
+
+.sermon-thumbnail img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
 .sermon-thumbnail {
   position: relative;
   max-width: 280px;     /* adjust down as needed */
