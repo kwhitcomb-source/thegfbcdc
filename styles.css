@@ -1072,4 +1072,43 @@ section {
     .floating-history-btn span {
         font-size: 9px;
     }
+
+    /* ===================================
+       HISTORY PAGE SPACING FIX
+       Reduces the "huge border" look caused by global section padding
+    =================================== */
+    
+    .history-hero,
+    .timeline-intro,
+    .history-timeline,
+    .historic-images,
+    .legacy-statement,
+    .history-cta {
+        padding: 3rem 0;
+    }
+    
+    /* Optional: tighten specific sections even more */
+    .timeline-intro,
+    .historic-images {
+        padding: 2.5rem 0;
+    }
+    
+    /* Optional: remove any accidental borders/outlines */
+    .history-hero,
+    .timeline-intro,
+    .history-timeline,
+    .historic-images,
+    .legacy-statement,
+    .history-cta,
+    .history-hero .container,
+    .timeline-intro .container,
+    .history-timeline .container,
+    .historic-images .container,
+    .legacy-statement .container,
+    .history-cta .container {
+        border: none;
+        outline: none;
+    }
+
+    
 }
