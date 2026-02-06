@@ -1,4 +1,6 @@
-/* Reset and Base Styles */
+/* ================================
+   RESET AND BASE
+================================ */
 * {
     margin: 0;
     padding: 0;
@@ -49,7 +51,9 @@ img {
     padding: 0 20px;
 }
 
-/* Navigation */
+/* ================================
+   NAVIGATION
+================================ */
 .navbar {
     background: var(--white);
     box-shadow: var(--shadow);
@@ -152,7 +156,9 @@ img {
     transition: all 0.3s ease;
 }
 
-/* Hero Section */
+/* ================================
+   HERO (HOME)
+================================ */
 .hero {
     position: relative;
     height: 600px;
@@ -213,14 +219,8 @@ img {
 }
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Hero Info Bar */
@@ -266,7 +266,9 @@ img {
     color: var(--text-light);
 }
 
-/* Buttons */
+/* ================================
+   BUTTONS
+================================ */
 .btn {
     display: inline-block;
     padding: 0.875rem 2rem;
@@ -311,7 +313,9 @@ img {
     color: var(--white);
 }
 
-/* Section Styles */
+/* ================================
+   SECTIONS
+================================ */
 section {
     padding: 5rem 0;
 }
@@ -334,7 +338,7 @@ section {
     margin: 0 auto;
 }
 
-/* Mission & Vision Section */
+/* Mission & Vision */
 .mission-vision {
     background: var(--bg-light);
 }
@@ -392,28 +396,9 @@ section {
     box-shadow: var(--shadow-lg);
     width: 100%;
     max-width: 400px;
-    align-items: center
 }
 
-.pastor-info h2 {
-    color: var(--primary-color);
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-}
-
-.pastor-info h3 {
-    color: var(--secondary-color);
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.pastor-info p {
-    color: var(--text-light);
-    margin-bottom: 1rem;
-    line-height: 1.8;
-}
-
-/* Youth Programs Section */
+/* Youth Programs */
 .youth-programs {
     background: var(--bg-light);
 }
@@ -507,7 +492,9 @@ section {
     text-decoration: underline;
 }
 
-/* Footer */
+/* ================================
+   FOOTER
+================================ */
 .footer {
     background: var(--primary-color);
     color: var(--white);
@@ -546,15 +533,17 @@ section {
     color: rgba(255, 255, 255, 0.7);
 }
 
-/*Staff Photo */
+/* Staff Photo */
 .staff-photo {
-  max-width: 300px;
-  width: 100%;
-  height: auto;
-  display: block;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-/* Leadership Page Specific Styles */
+/* ================================
+   LEADERSHIP PAGE
+================================ */
 .leadership-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -607,7 +596,9 @@ section {
     line-height: 1.8;
 }
 
-/* Bio Page */
+/* ================================
+   BIO PAGE
+================================ */
 .bio-hero {
     background: var(--bg-light);
     padding: 3rem 0;
@@ -642,7 +633,9 @@ section {
     line-height: 1.8;
 }
 
-/* Gallery Page */
+/* ================================
+   GALLERY PAGE
+================================ */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -668,7 +661,9 @@ section {
     transform: scale(1.1);
 }
 
-/* Calendar Page */
+/* ================================
+   CALENDAR PAGE
+================================ */
 .calendar-section {
     background: var(--white);
 }
@@ -701,7 +696,9 @@ section {
     line-height: 1.8;
 }
 
-/* Newsletter Page */
+/* ================================
+   NEWSLETTER PAGE
+================================ */
 .newsletter-section {
     background: var(--white);
 }
@@ -754,7 +751,9 @@ section {
     margin-top: 2rem;
 }
 
-/* Give Page */
+/* ================================
+   GIVE PAGE
+================================ */
 .give-hero {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: var(--white);
@@ -800,156 +799,53 @@ section {
     margin-bottom: 1rem;
 }
 
-/* Responsive Design */
-@media (max-width: 968px) {
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        flex-direction: column;
-        background: var(--white);
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow: var(--shadow);
-        padding: 2rem 0;
-        gap: 0;
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
-
-    .nav-menu li {
-        margin: 1rem 0;
-    }
-
-    .mobile-menu-toggle {
-        display: flex;
-    }
-
-    .hero-title {
-        font-size: 2.5rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.2rem;
-    }
-
-    .pastor-content,
-    .youth-content,
-    .giving-content,
-    .bio-content {
-        grid-template-columns: 1fr;
-    }
-
-    .giving-content {
-        grid-template-columns: 1fr;
-    }
-
-    .giving-content .giving-text {
-        order: 1;
-    }
-
-    .giving-content .giving-image {
-        order: 2;
-    }
-}
-
-@media (max-width: 640px) {
-    .hero {
-        height: 500px;
-    }
-
-    .hero-title {
-        font-size: 2rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-    }
-
-    .section-header h2 {
-        font-size: 2rem;
-    }
-
-    .info-items {
-        grid-template-columns: 1fr;
-    }
-
-    section {
-        padding: 3rem 0;
-    }
-}    
-/*================================
-  LIVE STREAM PAGE
-==================================*/
+/* ================================
+   LIVE STREAM PAGE
+================================ */
 .sermon-card {
-  max-width: 300px;
+    max-width: 300px;
 }
-
-.sermon-thumbnail img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-.sermon-card {
-  max-width: 300px;
-}
-
-.sermon-thumbnail img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
 
 .sermon-thumbnail {
-  position: relative;
-  max-width: 280px;     /* adjust down as needed */
-  height: 160px;     /* 16:9 ratio */
-  aspect-ratio: 16/9;
-  overflow: hidden;
+    position: relative;
+    max-width: 280px;
+    height: 160px;
+    aspect-ratio: 16/9;
+    overflow: hidden;
 }
 
 .sermon-thumbnail img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .play-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2rem;
-  color: white;
-  background: rgba(0, 0, 0, 0.6);
-  width: 55px;
-  height: 55px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  text-decoration: none;
-  cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .play-overlay:hover {
-  background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.8);
 }
 
-
-/* ===================================
+/* ================================
    FLOATING GIVE BUTTON
-=================================== */
-
+================================ */
 .floating-give-btn {
     position: fixed;
     bottom: 30px;
@@ -987,15 +883,136 @@ section {
 }
 
 @keyframes pulse-give {
-    0%, 100% {
-        box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
-    }
-    50% {
-        box-shadow: 0 6px 20px rgba(39, 174, 96, 0.7), 0 0 0 15px rgba(39, 174, 96, 0);
-    }
+    0%, 100% { box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4); }
+    50% { box-shadow: 0 6px 20px rgba(39, 174, 96, 0.7), 0 0 0 15px rgba(39, 174, 96, 0); }
 }
 
-/* Mobile Responsive */
+/* ================================
+   FLOATING HISTORY BUTTON
+================================ */
+.floating-history-btn {
+    position: fixed;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(44, 62, 80, 0.4);
+    text-decoration: none;
+    z-index: 9998;
+    transition: all 0.3s ease;
+    animation: pulse-history 2s infinite;
+}
+
+.floating-history-btn:hover {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 10px 30px rgba(44, 62, 80, 0.6);
+}
+
+.floating-history-btn i {
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.floating-history-btn span {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+@keyframes pulse-history {
+    0%, 100% { box-shadow: 0 6px 20px rgba(44, 62, 80, 0.4); }
+    50% { box-shadow: 0 6px 20px rgba(44, 62, 80, 0.7), 0 0 0 15px rgba(44, 62, 80, 0); }
+}
+
+/* ================================
+   HISTORY PAGE SPACING FIX
+   Requires: <body class="history-page"> and sections using class "history-section"
+================================ */
+body.history-page section {
+    padding: 0;
+}
+
+body.history-page .history-section {
+    padding: 3rem 0;
+}
+
+body.history-page .history-hero {
+    padding: 0;
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+body.history-page .timeline-intro.history-section,
+body.history-page .historic-images.history-section {
+    padding: 2.5rem 0;
+}
+
+body.history-page .history-hero,
+body.history-page .timeline-intro,
+body.history-page .history-timeline,
+body.history-page .historic-images,
+body.history-page .legacy-statement,
+body.history-page .history-cta,
+body.history-page .history-hero .container,
+body.history-page .timeline-intro .container,
+body.history-page .history-timeline .container,
+body.history-page .historic-images .container,
+body.history-page .legacy-statement .container,
+body.history-page .history-cta .container {
+    border: none;
+    outline: none;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 968px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: var(--white);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: var(--shadow);
+        padding: 2rem 0;
+        gap: 0;
+    }
+
+    .nav-menu.active { left: 0; }
+
+    .nav-menu li { margin: 1rem 0; }
+
+    .mobile-menu-toggle { display: flex; }
+
+    .hero-title { font-size: 2.5rem; }
+
+    .hero-subtitle { font-size: 1.2rem; }
+
+    .pastor-content,
+    .youth-content,
+    .giving-content,
+    .bio-content {
+        grid-template-columns: 1fr;
+    }
+
+    .giving-content .giving-text { order: 1; }
+    .giving-content .giving-image { order: 2; }
+}
+
 @media (max-width: 768px) {
     .floating-give-btn {
         bottom: 20px;
@@ -1003,168 +1020,32 @@ section {
         width: 60px;
         height: 60px;
     }
-    
-    .floating-give-btn i {
-        font-size: 20px;
-    }
-    
-    .floating-give-btn span {
-        font-size: 10px;
-    }
-    }
-    .floating-history-btn {
-        position: fixed;
-        top: 50%;
-        left: 30px;
-        transform: translateY(-50%);
-        background: linear-gradient(135deg, #2c3e50, #34495e);
-        color: white;
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 6px 20px rgba(44, 62, 80, 0.4);
-        text-decoration: none;
-        z-index: 9998;
-        transition: all 0.3s ease;
-        animation: pulse-history 2s infinite;
-    }
-    
-    .floating-history-btn:hover {
-        transform: translateY(-50%) scale(1.1);
-        box-shadow: 0 10px 30px rgba(44, 62, 80, 0.6);
-    }
-    
-    .floating-history-btn i {
-        font-size: 24px;
-        margin-bottom: 4px;
-    }
-    
-    .floating-history-btn span {
-        font-size: 10px;
-        font-weight: 700;
-        text-transform: uppercase;
-    }
-    
-    @keyframes pulse-history {
-    0%, 100% {
-        box-shadow: 0 6px 20px rgba(44, 62, 80, 0.4);
-    }
-    50% {
-        box-shadow: 0 6px 20px rgba(44, 62, 80, 0.7), 0 0 0 15px rgba(44, 62, 80, 0);
-    }
-}
 
-@media (max-width: 768px) {
+    .floating-give-btn i { font-size: 20px; }
+    .floating-give-btn span { font-size: 10px; }
+
     .floating-history-btn {
         left: 15px;
         width: 60px;
         height: 60px;
     }
 
-    .floating-history-btn i {
-        font-size: 20px;
-    }
-
-    .floating-history-btn span {
-        font-size: 9px;
-    }
+    .floating-history-btn i { font-size: 20px; }
+    .floating-history-btn span { font-size: 9px; }
 }
-    /* ===================================
-       HISTORY PAGE SPACING FIX
-       Reduces the "huge border" look caused by global section padding
-    =================================== */
-    
-    .history-hero,
-    .timeline-intro,
-    .history-timeline,
-    .historic-images,
-    .legacy-statement,
-    .history-cta {
-        padding: 3rem 0;
-    }
-    
-    /* Optional: tighten specific sections even more */
-    .timeline-intro,
-    .historic-images {
-        padding: 2.5rem 0;
-    }
-    
-    /* Optional: remove any accidental borders/outlines */
-    .history-hero,
-    .timeline-intro,
-    .history-timeline,
-    .historic-images,
-    .legacy-statement,
-    .history-cta,
-    .history-hero .container,
-    .timeline-intro .container,
-    .history-timeline .container,
-    .historic-images .container,
-    .legacy-statement .container,
-    .history-cta .container {
-        border: none;
-        outline: none;
-    }
 
-    /* ===================================
-       HISTORY PAGE LAYOUT like NEWSLETTER
-    =================================== */
-    
-    .history-page-section {
-      background: var(--white);
-      padding: 3rem 0;
-    }
-    
-    .history-page-content {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    
-    .history-header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    
-    .history-subtitle {
-      color: var(--text-light);
-      margin-top: 0.5rem;
-    }
-    
-    .history-quote {
-      background: var(--bg-light);
-      padding: 2rem;
-      border-radius: 10px;
-      margin-top: 2rem;
-      position: relative;
-    }
-    
-    .history-quote i {
-      color: var(--secondary-color);
-    }
-    
-    .history-block {
-      margin-top: 2.5rem;
-    }
-    
-    .legacy-quote {
-      background: var(--primary-color);
-      color: var(--white);
-      padding: 2rem;
-      border-radius: 10px;
-      margin-top: 1.5rem;
-      text-align: center;
-      font-style: italic;
-    }
-    
-    .legacy-quote cite {
-      display: block;
-      margin-top: 1rem;
-      font-style: normal;
-      opacity: 0.9;
-    }
-    
+@media (max-width: 640px) {
+    .hero { height: 500px; }
+
+    .hero-title { font-size: 2rem; }
+
+    .hero-subtitle { font-size: 1rem; }
+
+    .hero-buttons { flex-direction: column; }
+
+    .section-header h2 { font-size: 2rem; }
+
+    .info-items { grid-template-columns: 1fr; }
+
+    section { padding: 3rem 0; }
 }
