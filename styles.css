@@ -1384,3 +1384,17 @@ body.history-page .cta-buttons {
   margin-top: 1.25rem;
   flex-wrap: wrap;
 }
+body.history-page .ministers-list {
+  margin: 0.75rem 0 0 1.1rem;
+  color: var(--text-light);
+}
+
+body.history-page .ministers-list li {
+  margin: 0.35rem 0;
+}
+
+body.history-page .footnote {
+  margin-top: 0.75rem;
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
