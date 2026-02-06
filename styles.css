@@ -1034,7 +1034,7 @@ section {
 }
 
 .floating-history-btn:hover {
-    transform: scale(1.1) translateY(-5px);
+    transform: translateY(-50%) scale(1.1);
     box-shadow: 0 10px 30px rgba(44, 62, 80, 0.6);
 }
 
@@ -1060,18 +1060,17 @@ section {
 
 @media (max-width: 768px) {
     .floating-history-btn {
-        bottom: 90px;
-        right: 20px;
+        left: 15px;
         width: 60px;
         height: 60px;
     }
-    
+
     .floating-history-btn i {
         font-size: 20px;
     }
-    
+
     .floating-history-btn span {
         font-size: 9px;
     }
-}
+
 }
