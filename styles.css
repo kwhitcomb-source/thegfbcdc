@@ -1049,3 +1049,69 @@ body.history-page .history-cta .container {
 
     section { padding: 3rem 0; }
 }
+/* ===================================
+   HISTORY PAGE (NEWSLETTER STYLE) FIX
+   Keeps spacing clean and removes the "huge border" look
+   Requires: <body class="history-page">
+=================================== */
+
+body.history-page section {
+  padding: 0;               /* neutralize global section padding on this page */
+}
+
+body.history-page .history-page-section {
+  padding: 3rem 0;          /* controlled outer spacing */
+  background: var(--white);
+}
+
+body.history-page .history-page-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+body.history-page .history-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+body.history-page .history-subtitle {
+  color: var(--text-light);
+  margin-top: 0.5rem;
+}
+
+body.history-page .history-quote {
+  background: var(--bg-light);
+  padding: 2rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+body.history-page .history-block {
+  margin-top: 2.5rem;
+}
+
+body.history-page .legacy-quote {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 2rem;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  text-align: center;
+  font-style: italic;
+}
+
+body.history-page .legacy-quote cite {
+  display: block;
+  margin-top: 1rem;
+  font-style: normal;
+  opacity: 0.9;
+}
+
+/* Optional: keep CTA buttons nicely spaced */
+body.history-page .cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
