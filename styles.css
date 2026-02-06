@@ -1011,45 +1011,45 @@ section {
     .floating-give-btn span {
         font-size: 10px;
     }
-}
-.floating-history-btn {
-    position: fixed;
-    top: 50%;
-    left: 30px;
-    transform: translateY(-50%);
-    background: linear-gradient(135deg, #2c3e50, #34495e);
-    color: white;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 6px 20px rgba(44, 62, 80, 0.4);
-    text-decoration: none;
-    z-index: 9998;
-    transition: all 0.3s ease;
-    animation: pulse-history 2s infinite;
-}
-
-.floating-history-btn:hover {
-    transform: translateY(-50%) scale(1.1);
-    box-shadow: 0 10px 30px rgba(44, 62, 80, 0.6);
-}
-
-.floating-history-btn i {
-    font-size: 24px;
-    margin-bottom: 4px;
-}
-
-.floating-history-btn span {
-    font-size: 10px;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-@keyframes pulse-history {
+    }
+    .floating-history-btn {
+        position: fixed;
+        top: 50%;
+        left: 30px;
+        transform: translateY(-50%);
+        background: linear-gradient(135deg, #2c3e50, #34495e);
+        color: white;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 6px 20px rgba(44, 62, 80, 0.4);
+        text-decoration: none;
+        z-index: 9998;
+        transition: all 0.3s ease;
+        animation: pulse-history 2s infinite;
+    }
+    
+    .floating-history-btn:hover {
+        transform: translateY(-50%) scale(1.1);
+        box-shadow: 0 10px 30px rgba(44, 62, 80, 0.6);
+    }
+    
+    .floating-history-btn i {
+        font-size: 24px;
+        margin-bottom: 4px;
+    }
+    
+    .floating-history-btn span {
+        font-size: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    
+    @keyframes pulse-history {
     0%, 100% {
         box-shadow: 0 6px 20px rgba(44, 62, 80, 0.4);
     }
@@ -1072,7 +1072,7 @@ section {
     .floating-history-btn span {
         font-size: 9px;
     }
-
+}
     /* ===================================
        HISTORY PAGE SPACING FIX
        Reduces the "huge border" look caused by global section padding
@@ -1166,6 +1166,5 @@ section {
       font-style: normal;
       opacity: 0.9;
     }
-
     
 }
