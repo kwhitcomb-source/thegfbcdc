@@ -1398,3 +1398,71 @@ body.history-page .footnote {
   color: var(--text-light);
   font-size: 0.95rem;
 }
+/* ===================================
+   FLOATING SURVEY BUTTON
+=================================== */
+
+.floating-survey-btn {
+    position: fixed;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, #8b4513, #c19a6b);
+    color: #ffffff;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
+    text-decoration: none;
+    z-index: 9997;
+    transition: all 0.3s ease;
+    animation: pulse-survey 2s infinite;
+}
+
+.floating-survey-btn:hover {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 10px 30px rgba(139, 69, 19, 0.6);
+}
+
+.floating-survey-btn i {
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+
+.floating-survey-btn span {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Pulse animation */
+@keyframes pulse-survey {
+    0%, 100% {
+        box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
+    }
+    50% {
+        box-shadow: 0 6px 20px rgba(139, 69, 19, 0.7),
+                    0 0 0 15px rgba(139, 69, 19, 0);
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .floating-survey-btn {
+        right: 15px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .floating-survey-btn i {
+        font-size: 18px;
+    }
+
+    .floating-survey-btn span {
+        font-size: 9px;
+    }
+}
