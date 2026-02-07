@@ -1472,39 +1472,43 @@ body.history-page .footnote {
 
 .floating-visitor-btn {
     position: fixed;
-    bottom: 120px; /* sits below Give button */
+    top: 50%;
     right: 30px;
+    transform: translateY(-50%);
     background: linear-gradient(135deg, #2c3e50, #34495e);
     color: white;
-    width: 70px;
+
     height: 70px;
-    border-radius: 50%;
+    padding: 0 22px;        /* adds horizontal space */
+    min-width: 180px;       /* ensures text fits */
+
+    border-radius: 35px;    /* pill shape */
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    gap: 10px;
+
     box-shadow: 0 6px 20px rgba(44, 62, 80, 0.4);
     text-decoration: none;
     z-index: 9998;
     transition: all 0.3s ease;
-    animation: pulse-visitor 2s infinite;
+    animation: pulse-history 2s infinite;
 }
 
 .floating-visitor-btn:hover {
-    transform: scale(1.1) translateY(-5px);
+    transform: translateY(-50%) scale(1.05);
     box-shadow: 0 10px 30px rgba(44, 62, 80, 0.6);
 }
 
 .floating-visitor-btn i {
     font-size: 22px;
-    margin-bottom: 4px;
 }
 
 .floating-visitor-btn span {
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 700;
-    text-transform: uppercase;
+    white-space: nowrap;
 }
+
 
 /* Pulse animation */
 @keyframes pulse-visitor {
@@ -1527,7 +1531,7 @@ body.history-page .footnote {
     }
 
     .floating-visitor-btn i {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .floating-visitor-btn span {
