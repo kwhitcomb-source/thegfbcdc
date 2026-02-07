@@ -235,7 +235,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   visitorBtn.innerHTML = `
     <i class="fas fa-user-check"></i>
-    <span>1st Time</span>
+    <span>1st Time Visitor</span>
   `;
 
   document.body.appendChild(visitorBtn);
