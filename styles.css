@@ -1519,22 +1519,25 @@ body.history-page .footnote {
         box-shadow: 0 6px 20px rgba(44, 62, 80, 0.7),
                     0 0 0 15px rgba(44, 62, 80, 0);
     }
+
+   /* Mobile sizing – pill button */
+   @media (max-width: 768px) {
+       .floating-visitor-btn {
+           right: 16px;
+           bottom: 100px;          /* stays above Give button */
+           padding: 10px 14px;
+           min-width: 150px;
+           height: auto;
+           border-radius: 30px;
+           gap: 8px;
+       }
+   
+       .floating-visitor-btn i {
+           font-size: 18px;
+       }
+   
+       .floating-visitor-btn span {
+           font-size: 13px;
+       }
 }
 
-/* Mobile sizing */
-@media (max-width: 768px) {
-    .floating-visitor-btn {
-        bottom: 95px;
-        right: 20px;
-        width: 60px;
-        height: 60px;
-    }
-
-    .floating-visitor-btn i {
-        font-size: 20px;
-    }
-
-    .floating-visitor-btn span {
-        font-size: 9px;
-    }
-}
