@@ -1466,3 +1466,71 @@ body.history-page .footnote {
         font-size: 9px;
     }
 }
+/* ===================================
+   FLOATING 1ST TIME VISITOR BUTTON
+=================================== */
+
+.floating-visitor-btn {
+    position: fixed;
+    bottom: 120px; /* sits below Give button */
+    right: 30px;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(44, 62, 80, 0.4);
+    text-decoration: none;
+    z-index: 9998;
+    transition: all 0.3s ease;
+    animation: pulse-visitor 2s infinite;
+}
+
+.floating-visitor-btn:hover {
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 10px 30px rgba(44, 62, 80, 0.6);
+}
+
+.floating-visitor-btn i {
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+
+.floating-visitor-btn span {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Pulse animation */
+@keyframes pulse-visitor {
+    0%, 100% {
+        box-shadow: 0 6px 20px rgba(44, 62, 80, 0.4);
+    }
+    50% {
+        box-shadow: 0 6px 20px rgba(44, 62, 80, 0.7),
+                    0 0 0 15px rgba(44, 62, 80, 0);
+    }
+}
+
+/* Mobile sizing */
+@media (max-width: 768px) {
+    .floating-visitor-btn {
+        bottom: 95px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .floating-visitor-btn i {
+        font-size: 18px;
+    }
+
+    .floating-visitor-btn span {
+        font-size: 9px;
+    }
+}
