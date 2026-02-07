@@ -216,5 +216,19 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const visitorBtn = document.createElement("a");
+  visitorBtn.href = "https://forms.gle/AJsrUvrMKC35FvCh8";
+  visitorBtn.target = "_blank";
+  visitorBtn.className = "floating-visitor-btn";
+  visitorBtn.setAttribute("aria-label", "First Time Visitor Form");
+  visitorBtn.innerHTML = `
+    <i class="fas fa-user-check"></i>
+    <span>1st Time</span>
+  `;
+  document.body.appendChild(visitorBtn);
+});
+
+
 
 console.log('The Greater First Baptist Church website loaded successfully!');
