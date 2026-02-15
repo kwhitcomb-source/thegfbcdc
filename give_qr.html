@@ -172,9 +172,11 @@
                 <p>Scan the QR code with your smartphone to submit your digital giving card</p>
                 
                 <div class="qr-display">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://form.jotform.com/90234643898164" 
+                    <a href="giving-form-paypal3.html">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=giving-form-paypal3.html" 
                          alt="Scan to Give" 
                          class="qr-code-img">
+                    </a>
                 </div>
 
                 <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 10px; margin-top: 2rem;">
@@ -251,8 +253,7 @@
     <script>
         document.getElementById('givingForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Thank you for your generous gift! Your giving card has been submitted.');
-            this.reset();
+            window.location.href = 'giving-form-paypal3.html';
         });
     </script>
 </body>
