@@ -1,16 +1,15 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Give Online | The Greater First Baptist Church</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <!-- PayPal SDK -->
-    <script src="https://www.paypal.com/sdk/js?client-id=AUSZQwVl4rNKe9_r0xZoKGskpeb3wOt78EmpHd6PRpZIVLeMpukf2U1W3oev2OzhJzAB9fsOqIyAEj8b&currency=USD"></script>
-    
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Give Online | The Greater First Baptist Church</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Open+Sans:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<!-- PayPal SDK -->
+<script src="https://www.paypal.com/sdk/js?client-id=AUSZQwVl4rNKe9_r0xZoKGskpeb3wOt78EmpHd6PRpZIVLeMpukf2U1W3oev2OzhJzAB9fsOqIyAEj8b&amp;currency=USD"></script>
+<style>
         :root {
             --primary-color: #2c3e50;
             --secondary-color: #8b4513;
@@ -303,149 +302,124 @@
             }
         }
     </style>
-</head>
+<link href="favicon.png" rel="icon" type="image/png"/></head>
 <body>
-    <div class="container">
-        <div class="form-header">
-            <h1><i class="fas fa-heart"></i> Give to The Greater First Baptist Church</h1>
-        </div>
-
-        <form class="giving-form" id="givingForm">
-            <!-- Personal Information -->
-            <div class="form-section">
-                <h2 class="section-title">Personal Information</h2>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="firstName">First Name <span class="required">*</span></label>
-                        <input type="text" id="firstName" name="firstName" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="lastName">Last Name <span class="required">*</span></label>
-                        <input type="text" id="lastName" name="lastName" required>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email <span class="required">*</span></label>
-                    <input type="email" id="email" name="email" required>
-                    <small>Receipt will be sent to this email</small>
-                </div>
-
-                <div class="form-group">
-                    <label for="phone">Phone Number <span class="required">*</span></label>
-                    <input type="tel" id="phone" name="phone" placeholder="202-555-1234" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="envelope">Envelope # (Optional)</label>
-                    <input type="text" id="envelope" name="envelope" placeholder="Optional">
-                </div>
-            </div>
-
-            <div class="divider"></div>
-
-            <!-- Giving Amounts -->
-            <div class="form-section">
-                <h2 class="section-title">Giving Amounts</h2>
-
-                <div class="info-box">
-                    <i class="fas fa-info-circle"></i>
+<div class="container">
+<div class="form-header">
+<h1><i class="fas fa-heart"></i> Give to The Greater First Baptist Church</h1>
+</div>
+<form class="giving-form" id="givingForm">
+<!-- Personal Information -->
+<div class="form-section">
+<h2 class="section-title">Personal Information</h2>
+<div class="form-row">
+<div class="form-group">
+<label for="firstName">First Name <span class="required">*</span></label>
+<input id="firstName" name="firstName" required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="lastName">Last Name <span class="required">*</span></label>
+<input id="lastName" name="lastName" required="" type="text"/>
+</div>
+</div>
+<div class="form-group">
+<label for="email">Email <span class="required">*</span></label>
+<input id="email" name="email" required="" type="email"/>
+<small>Receipt will be sent to this email</small>
+</div>
+<div class="form-group">
+<label for="phone">Phone Number <span class="required">*</span></label>
+<input id="phone" name="phone" placeholder="202-555-1234" required="" type="tel"/>
+</div>
+<div class="form-group">
+<label for="envelope">Envelope # (Optional)</label>
+<input id="envelope" name="envelope" placeholder="Optional" type="text"/>
+</div>
+</div>
+<div class="divider"></div>
+<!-- Giving Amounts -->
+<div class="form-section">
+<h2 class="section-title">Giving Amounts</h2>
+<div class="info-box">
+<i class="fas fa-info-circle"></i>
                     Enter amounts for each category. Total will be calculated automatically.
                 </div>
-
-                <div class="giving-amounts">
-                    <div class="amount-grid">
-                        <div class="amount-item">
-                            <label for="tithes">Tithes</label>
-                            <input type="number" id="tithes" name="tithes" placeholder="0.00" step="0.01" min="0" value="0">
-                        </div>
-
-                        <div class="amount-item">
-                            <label for="offering">Offering</label>
-                            <input type="number" id="offering" name="offering" placeholder="0.00" step="0.01" min="0" value="0">
-                        </div>
-
-                        <div class="amount-item">
-                            <label for="mission">Mission</label>
-                            <input type="number" id="mission" name="mission" placeholder="0.00" step="0.01" min="0" value="0">
-                        </div>
-
-                        <div class="amount-item">
-                            <label for="scholarship">Scholarship</label>
-                            <input type="number" id="scholarship" name="scholarship" placeholder="0.00" step="0.01" min="0" value="0">
-                        </div>
-
-                        <div class="amount-item">
-                            <label for="elevator">Elevator</label>
-                            <input type="number" id="elevator" name="elevator" placeholder="0.00" step="0.01" min="0" value="0">
-                        </div>
-
-                        <div class="amount-item">
-                            <label for="buildingFund">Building Fund</label>
-                            <input type="number" id="buildingFund" name="buildingFund" placeholder="0.00" step="0.01" min="0" value="0">
-                        </div>
-                        
-                        <div class="amount-item">
-                            <label for="specialGuest">Special Guest</label>
-                            <input type="number" id="special" name="special" placeholder="0.00" step="0.01" min="0" value="0">
-                        </div>                        
-                        
-                        <div class="amount-item">
-                            <label for="pastorsLoveOffering">Pastors Love Offering</label>
-                            <input type="number" id="special" name="special" placeholder="0.00" step="0.01" min="0" value="0">
-                        </div>
-                        
-                        <div class="amount-item">
-                            <label for="special">Special</label>
-                            <input type="number" id="special" name="special" placeholder="0.00" step="0.01" min="0" value="0">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Total Display -->
-                <div class="total-display">
-                    <label>Total Giving Amount</label>
-                    <div class="total-amount">$<span id="totalAmount">0.00</span></div>
-                </div>
-            </div>
-
-            <div class="divider"></div>
-
-            <!-- PayPal Payment Section -->
-            <div class="form-section">
-                <div class="payment-section">
-                    <h3><i class="fab fa-paypal"></i> Complete Payment</h3>
-                    <p style="margin-bottom: 1rem; color: #666;">
+<div class="giving-amounts">
+<div class="amount-grid">
+<div class="amount-item">
+<label for="tithes">Tithes</label>
+<input id="tithes" min="0" name="tithes" placeholder="0.00" step="0.01" type="number" value="0"/>
+</div>
+<div class="amount-item">
+<label for="offering">Offering</label>
+<input id="offering" min="0" name="offering" placeholder="0.00" step="0.01" type="number" value="0"/>
+</div>
+<div class="amount-item">
+<label for="mission">Mission</label>
+<input id="mission" min="0" name="mission" placeholder="0.00" step="0.01" type="number" value="0"/>
+</div>
+<div class="amount-item">
+<label for="scholarship">Scholarship</label>
+<input id="scholarship" min="0" name="scholarship" placeholder="0.00" step="0.01" type="number" value="0"/>
+</div>
+<div class="amount-item">
+<label for="elevator">Elevator</label>
+<input id="elevator" min="0" name="elevator" placeholder="0.00" step="0.01" type="number" value="0"/>
+</div>
+<div class="amount-item">
+<label for="buildingFund">Building Fund</label>
+<input id="buildingFund" min="0" name="buildingFund" placeholder="0.00" step="0.01" type="number" value="0"/>
+</div>
+<div class="amount-item">
+<label for="specialGuest">Special Guest</label>
+<input id="special" min="0" name="special" placeholder="0.00" step="0.01" type="number" value="0"/>
+</div>
+<div class="amount-item">
+<label for="pastorsLoveOffering">Pastors Love Offering</label>
+<input id="special" min="0" name="special" placeholder="0.00" step="0.01" type="number" value="0"/>
+</div>
+<div class="amount-item">
+<label for="special">Special</label>
+<input id="special" min="0" name="special" placeholder="0.00" step="0.01" type="number" value="0"/>
+</div>
+</div>
+</div>
+<!-- Total Display -->
+<div class="total-display">
+<label>Total Giving Amount</label>
+<div class="total-amount">$<span id="totalAmount">0.00</span></div>
+</div>
+</div>
+<div class="divider"></div>
+<!-- PayPal Payment Section -->
+<div class="form-section">
+<div class="payment-section">
+<h3><i class="fab fa-paypal"></i> Complete Payment</h3>
+<p style="margin-bottom: 1rem; color: #666;">
                         Click the PayPal button below to complete your donation securely.
                     </p>
-                    
-                    <!-- PayPal Button Container -->
-                    <div id="paypal-button-container"></div>
-
-                    <div class="secure-badge">
-                        <i class="fas fa-lock"></i>
-                        <span>Secure payment powered by PayPal. Pay with PayPal, debit card, or credit card.</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Messages -->
-            <div class="message success" id="successMessage">
-                <i class="fas fa-check-circle" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                <h3>Thank You for Your Generous Gift!</h3>
-                <p>Your payment has been processed successfully. A receipt has been sent to your email.</p>
-            </div>
-
-            <div class="message error" id="errorMessage">
-                <i class="fas fa-exclamation-circle" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                <h3>Payment Not Completed</h3>
-                <p id="errorText">Please try again or contact the church office if the problem persists.</p>
-            </div>
-        </form>
-    </div>
-
-    <script>
+<!-- PayPal Button Container -->
+<div id="paypal-button-container"></div>
+<div class="secure-badge">
+<i class="fas fa-lock"></i>
+<span>Secure payment powered by PayPal. Pay with PayPal, debit card, or credit card.</span>
+</div>
+</div>
+</div>
+<!-- Messages -->
+<div class="message success" id="successMessage">
+<i class="fas fa-check-circle" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+<h3>Thank You for Your Generous Gift!</h3>
+<p>Your payment has been processed successfully. A receipt has been sent to your email.</p>
+</div>
+<div class="message error" id="errorMessage">
+<i class="fas fa-exclamation-circle" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+<h3>Payment Not Completed</h3>
+<p id="errorText">Please try again or contact the church office if the problem persists.</p>
+</div>
+</form>
+</div>
+<script>
         // Calculate total
         const amountInputs = document.querySelectorAll('.amount-item input');
         const totalDisplay = document.getElementById('totalAmount');

@@ -242,3 +242,77 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 console.log('The Greater First Baptist Church website loaded successfully!');
+
+
+// Pastoral installation modal
+(function () {
+    const modal = document.getElementById('installationModal');
+    if (!modal) return;
+
+    const expiry = new Date('2026-04-01T00:00:00');
+    const storageKey = 'tgfbcInstallationModalDismissed';
+
+    if (new Date() >= expiry) {
+        modal.remove();
+        return;
+    }
+
+    const closeButtons = modal.querySelectorAll('[data-close-installation-modal="true"]');
+    let previousFocus = null;
+
+    const focusableSelector = 'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])';
+
+    function openModal() {
+        previousFocus = document.activeElement;
+        modal.hidden = false;
+        document.body.classList.add('installation-modal-open');
+        const firstFocusable = modal.querySelector(focusableSelector);
+        if (firstFocusable) firstFocusable.focus();
+    }
+
+    function closeModal(storeDismissal) {
+        modal.hidden = true;
+        document.body.classList.remove('installation-modal-open');
+        if (storeDismissal) {
+            localStorage.setItem(storageKey, 'true');
+        }
+        if (previousFocus && typeof previousFocus.focus === 'function') {
+            previousFocus.focus();
+        }
+    }
+
+    if (localStorage.getItem(storageKey) !== 'true') {
+        window.setTimeout(openModal, 400);
+    }
+
+    closeButtons.forEach(button => {
+        button.addEventListener('click', () => closeModal(true));
+    });
+
+    modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            closeModal(true);
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (modal.hidden) return;
+        if (event.key === 'Escape') {
+            closeModal(true);
+            return;
+        }
+        if (event.key === 'Tab') {
+            const focusable = Array.from(modal.querySelectorAll(focusableSelector)).filter(el => el.offsetParent !== null);
+            if (!focusable.length) return;
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+            if (event.shiftKey && document.activeElement === first) {
+                event.preventDefault();
+                last.focus();
+            } else if (!event.shiftKey && document.activeElement === last) {
+                event.preventDefault();
+                first.focus();
+            }
+        }
+    });
+})();
