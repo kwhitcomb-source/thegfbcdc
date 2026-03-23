@@ -315,4 +315,19 @@ console.log('The Greater First Baptist Church website loaded successfully!');
             }
         }
     });
+    function toggleMinistryDirectory() {
+    const directory = document.getElementById('ministryDirectory');
+    const button = document.querySelector('.ministry-toggle-btn');
+    const expanded = button.getAttribute('aria-expanded') === 'true';
+
+    if (expanded) {
+        directory.hidden = true;
+        button.setAttribute('aria-expanded', 'false');
+        button.textContent = 'View Ministries';
+    } else {
+        directory.hidden = false;
+        button.setAttribute('aria-expanded', 'true');
+        button.textContent = 'Hide Ministries';
+    }
+}
 })();
