@@ -1916,3 +1916,57 @@ footer .footer-logo-image,
         max-width: 20px !important;
     }
 }
+.ministry-directory-section {
+    padding: 4rem 0;
+}
+
+.ministry-toggle-wrap {
+    text-align: center;
+    margin: 1.5rem 0 2rem;
+}
+
+.ministry-toggle-btn {
+    display: inline-block;
+}
+
+.ministry-directory-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.ministry-directory-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ministry-directory-list li {
+    padding: 0.85rem 0;
+    border-bottom: 1px solid #e5e5e5;
+    color: #333333;
+    line-height: 1.5;
+}
+
+.ministry-directory-list li:last-child {
+    border-bottom: none;
+}
+
+.directory-intro {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .ministry-directory-grid {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+    }
+}
