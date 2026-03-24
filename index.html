@@ -14,45 +14,6 @@
 <!-- Other head content -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
 <link href="favicon.png" rel="icon" type="image/png"/></head>
-<script>
-const INSTALLATION_DATE = new Date('2026-03-31');
-const MODAL_SHOWN_KEY = 'installationModalDismissed';
-
-function showInstallationModal() {
-    const modal = document.getElementById('installationModal');
-    if (!modal) return;
-    
-    const dismissed = localStorage.getItem(MODAL_SHOWN_KEY);
-    const passed = new Date() >= INSTALLATION_DATE;
-    
-    if (!dismissed && !passed) {
-        modal.classList.add('show');
-        document.body.style.overflow = 'hidden';
-    } else if (passed) {
-        modal.remove();
-    }
-}
-
-function closeInstallationModal() {
-    const modal = document.getElementById('installationModal');
-    if (!modal) return;
-    modal.classList.remove('show');
-    document.body.style.overflow = '';
-    localStorage.setItem(MODAL_SHOWN_KEY, 'true');
-}
-
-document.addEventListener('click', e => {
-    if (e.target.classList.contains('modal-overlay')) closeInstallationModal();
-});
-
-document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') closeInstallationModal();
-});
-
-window.addEventListener('load', () => {
-    setTimeout(showInstallationModal, 1500);
-});
-</script>    
 <body>
 <!-- Installation Modal Pop-Up -->
 <div id="installationModal" class="installation-modal">
