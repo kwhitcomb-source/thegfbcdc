@@ -2241,3 +2241,39 @@ footer .footer-logo-image,
         font-size: 1.3rem;
     }
 }
+/* ===================================================
+   LOGO STYLES
+=================================================== */
+
+.logo img {
+    height: 70px;
+    width: auto;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.logo img:hover {
+    opacity: 0.9;
+}
+
+.footer-logo {
+    height: 60px;
+    width: auto;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 968px) {
+    .logo img {
+        height: 55px;
+    }
+}
+
+@media (max-width: 640px) {
+    .logo img {
+        height: 45px;
+    }
+    
+    .footer-logo {
+        height: 45px;
+    }
+}
