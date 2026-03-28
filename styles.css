@@ -2385,3 +2385,10 @@ footer .footer-logo-image,
         height: 35px;
     }
 }
+
+
+body.installation-modal-open {
+    overflow: hidden;
+}
+
+.modal-overlay { cursor: pointer; }

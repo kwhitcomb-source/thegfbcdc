@@ -9,11 +9,10 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Open+Sans:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
-<link rel="icon" type="image/png" href="images/tgfbc-logo.png">
-<link rel="apple-touch-icon" href="images/tgfbc-logo.png">    
-<!-- Other head content -->
+<link rel="icon" type="image/png" href="favicon.png"/>
+<link rel="apple-touch-icon" href="images/tgfbc-logo.png"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
-<link href="favicon.png" rel="icon" type="image/png"/></head>
+</head>
 <body>
 <!-- Installation Modal Pop-Up -->
 <div id="installationModal" class="installation-modal">
@@ -52,7 +51,7 @@
                     <div class="modal-actions">
                         <a href="documents/TGFBC_Pastor_Queen_Installation_Invite.pdf" 
                            class="btn btn-primary" 
-                           target="_blank">
+                           target="_blank" rel="noopener noreferrer">
                             <i class="fas fa-file-pdf"></i> View Full Invitation
                         </a>
                         <button class="btn btn-secondary" onclick="closeInstallationModal()">
@@ -274,52 +273,78 @@
 </div>
 </footer>
 <script src="script.js"></script>
- <script>
+<script>
 /* Installation Modal JavaScript */
-const INSTALLATION_DATE = new Date('2026-03-31');
+const INSTALLATION_DATE = new Date('2026-04-01T00:00:00');
 const MODAL_SHOWN_KEY = 'installationModalDismissed';
 const MODAL_DELAY = 1500;
 
-function showInstallationModal() {
+function shouldForceShowInstallationModal() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('showpopup') === '1' || window.location.hash === '#showpopup';
+}
+
+function showInstallationModal(forceShow = false) {
     const modal = document.getElementById('installationModal');
     if (!modal) return;
-    
-    const alreadyDismissed = localStorage.getItem(MODAL_SHOWN_KEY);
+
     const today = new Date();
     const installationPassed = today >= INSTALLATION_DATE;
-    
-    if (!alreadyDismissed && !installationPassed) {
-        modal.classList.add('show');
-        document.body.style.overflow = 'hidden';
-    } else if (installationPassed) {
+    let alreadyDismissed = false;
+
+    try {
+        alreadyDismissed = localStorage.getItem(MODAL_SHOWN_KEY) === 'true';
+    } catch (e) {}
+
+    if (installationPassed && !forceShow) {
         modal.remove();
+        return;
+    }
+
+    if (!alreadyDismissed || forceShow) {
+        modal.classList.add('show');
+        document.body.classList.add('installation-modal-open');
     }
 }
 
 function closeInstallationModal() {
     const modal = document.getElementById('installationModal');
     if (!modal) return;
-    
+
     modal.classList.remove('show');
-    document.body.style.overflow = '';
-    localStorage.setItem(MODAL_SHOWN_KEY, 'true');
+    document.body.classList.remove('installation-modal-open');
+
+    try {
+        localStorage.setItem(MODAL_SHOWN_KEY, 'true');
+    } catch (e) {}
 }
 
+function resetInstallationModalForTesting() {
+    try {
+        localStorage.removeItem(MODAL_SHOWN_KEY);
+    } catch (e) {}
+    showInstallationModal(true);
+}
+
+window.resetInstallationModalForTesting = resetInstallationModalForTesting;
+
 document.addEventListener('click', function(e) {
-    const modal = document.getElementById('installationModal');
     if (e.target.classList.contains('modal-overlay')) {
         closeInstallationModal();
     }
 });
 
 document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
+    const modal = document.getElementById('installationModal');
+    if (e.key === 'Escape' && modal && modal.classList.contains('show')) {
         closeInstallationModal();
     }
 });
 
 window.addEventListener('load', function() {
-    setTimeout(showInstallationModal, MODAL_DELAY);
+    setTimeout(function() {
+        showInstallationModal(shouldForceShowInstallationModal());
+    }, MODAL_DELAY);
 });
 </script>
 <!-- Floating Our History Button -->
