@@ -373,16 +373,16 @@
 <input id="buildingFund" min="0" name="buildingFund" placeholder="0.00" step="0.01" type="number" value="0"/>
 </div>
 <div class="amount-item">
-<label for="specialGuest">Special Guest</label>
-<input id="special" min="0" name="special" placeholder="0.00" step="0.01" type="number" value="0"/>
+    <label for="specialGuest">Special Guest</label>
+    <input id="specialGuest" min="0" name="specialGuest" placeholder="0.00" step="0.01" type="number" value="0"/>
 </div>
 <div class="amount-item">
-<label for="pastorsLoveOffering">Pastors Love Offering</label>
-<input id="special" min="0" name="special" placeholder="0.00" step="0.01" type="number" value="0"/>
+    <label for="pastorsLoveOffering">Pastors Love Offering</label>
+    <input id="pastorsLoveOffering" min="0" name="pastorsLoveOffering" placeholder="0.00" step="0.01" type="number" value="0"/>
 </div>
 <div class="amount-item">
-<label for="special">Special</label>
-<input id="special" min="0" name="special" placeholder="0.00" step="0.01" type="number" value="0"/>
+    <label for="special">Special</label>
+    <input id="special" min="0" name="special" placeholder="0.00" step="0.01" type="number" value="0"/>
 </div>
 </div>
 </div>
@@ -531,14 +531,17 @@
         function buildItemsList(formData, total) {
             const items = [];
             
-            const categories = {
+           const categories = {
                 tithes: 'Tithes',
                 offering: 'Offering',
                 mission: 'Mission',
                 scholarship: 'Scholarship',
                 elevator: 'Elevator',
                 buildingFund: 'Building Fund',
+                specialGuest: 'Special Guest',
+                pastorsLoveOffering: 'Pastors Love Offering',
                 special: 'Special'
+              };
             };
 
             for (const [key, label] of Object.entries(categories)) {
